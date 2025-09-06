@@ -1,22 +1,413 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Interactive Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Zuzia September 6th</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    #questions-container .question {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .question-text {
+      margin: 0 0 0.5rem 0;
+      font-weight: bold;
+    }
+    .answers {
+      list-style: none;
+      padding: 0;
+    }
+    .answers li {
+      margin-bottom: 0.4rem;
+    }
+    .submit-btn {
+      margin-top: 0.8rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .feedback {
+      margin-top: 1rem;
+      padding: 0.6rem;
+      border-top: 1px solid #ccc;
+    }
+    .feedback p {
+      margin: 0.4rem 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>HTML Basics Quiz</h1>
-  <form id="quiz-form">
-    <div>
-      <p>1. What does HTML stand for?</p>
-      <input type="radio" name="q1" value="a"> Home Tool Markup Language<br>
-      <input type="radio" name="q1" value="b"> HyperText Markup Language<br>
-      <input type="radio" name="q1" value="c"> Hyperlink Text Management Language<br>
+  <h1>Zuzia September 6th</h1>
+  <div id="questions-container">
+    <!-- Phrasal Verbs -->
+    <div class="question"
+         data-explanation="to begin working seriously on something"
+         data-example="After vacation, she really buckled down to finish her dissertation.">
+      <p class="question-text">What does “buckle down to” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to begin working seriously on something</label></li>
+        <li><label><input type="radio" data-correct="false"> to pause and rest</label></li>
+        <li><label><input type="radio" data-correct="false"> to travel quickly</label></li>
+        <li><label><input type="radio" data-correct="false"> to negotiate terms</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
     </div>
-    <button type="button" onclick="submitQuiz()">Submit</button>
-  </form>
-  <div id="result"></div>
 
-  <script src="script.js"></script>
+    <div class="question"
+         data-explanation="to review or improve one’s knowledge or skill"
+         data-example="He brushed up on his Spanish before moving to Madrid.">
+      <p class="question-text">What does “brush up on” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="false"> to completely forget something</label></li>
+        <li><label><input type="radio" data-correct="true"> to review or improve one’s knowledge or skill</label></li>
+        <li><label><input type="radio" data-correct="false"> to clean vigorously</label></li>
+        <li><label><input type="radio" data-correct="false"> to ignore repeatedly</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to suddenly stop talking or refuse to speak"
+         data-example="When the police arrived, the suspect clammed up completely.">
+      <p class="question-text">What does “clam up” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="false"> to speak rapidly</label></li>
+        <li><label><input type="radio" data-correct="true"> to suddenly stop talking</label></li>
+        <li><label><input type="radio" data-correct="false"> to clean one’s shell</label></li>
+        <li><label><input type="radio" data-correct="false"> to hide under pressure</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to stop a small problem from becoming a bigger one"
+         data-example="They nipped the dispute in the bud before it escalated.">
+      <p class="question-text">What does “nip in the bud” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to stop a small problem early</label></li>
+        <li><label><input type="radio" data-correct="false"> to water plants</label></li>
+        <li><label><input type="radio" data-correct="false"> to ignore serious issues</label></li>
+        <li><label><input type="radio" data-correct="false"> to prune trees</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to follow rules or expectations strictly"
+         data-example="All officers must toe the line or face consequences.">
+      <p class="question-text">What does “toe the line” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to follow rules strictly</label></li>
+        <li><label><input type="radio" data-correct="false"> to stand on one foot</label></li>
+        <li><label><input type="radio" data-correct="false"> to dance carefully</label></li>
+        <li><label><input type="radio" data-correct="false"> to overstep boundaries</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to direct full attention toward something"
+         data-example="The camera zeroed in on the presenter’s face.">
+      <p class="question-text">What does “zero in on” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="false"> to avoid attention</label></li>
+        <li><label><input type="radio" data-correct="true"> to direct full attention toward something</label></li>
+        <li><label><input type="radio" data-correct="false"> to scatter focus</label></li>
+        <li><label><input type="radio" data-correct="false"> to skip details</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to resolve a problem by discussion or adjustment"
+         data-example="They ironed out the contract terms before signing.">
+      <p class="question-text">What does “iron out” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to resolve by discussion</label></li>
+        <li><label><input type="radio" data-correct="false"> to flatten clothes</label></li>
+        <li><label><input type="radio" data-correct="false"> to magnify issues</label></li>
+        <li><label><input type="radio" data-correct="false"> to push away difficulties</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <!-- Idiomatic Expressions -->
+    <div class="question"
+         data-explanation="to work late into the night"
+         data-example="She burned the midnight oil to prepare for her exams.">
+      <p class="question-text">What does “burn the midnight oil” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to work late into the night</label></li>
+        <li><label><input type="radio" data-correct="false"> to waste oil</label></li>
+        <li><label><input type="radio" data-correct="false"> to sleep early</label></li>
+        <li><label><input type="radio" data-correct="false"> to burn resources</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to start something energetically and successfully"
+         data-example="She hit the ground running on her first day at the firm.">
+      <p class="question-text">What does “hit the ground running” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to start energetically</label></li>
+        <li><label><input type="radio" data-correct="false"> to fall over quickly</label></li>
+        <li><label><input type="radio" data-correct="false"> to delay starting</label></li>
+        <li><label><input type="radio" data-correct="false"> to retire early</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to take on more than one can handle"
+         data-example="By signing up for five courses, he bit off more than he could chew.">
+      <p class="question-text">What does “bite off more than you can chew” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to take on too much</label></li>
+        <li><label><input type="radio" data-correct="false"> to eat quickly</label></li>
+        <li><label><input type="radio" data-correct="false"> to chew one’s lip</label></li>
+        <li><label><input type="radio" data-correct="false"> to delay tasks</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to tease or trick someone playfully"
+         data-example="I was only pulling your leg when I said you’d won the lottery.">
+      <p class="question-text">What does “pull someone’s leg” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="false"> to support someone</label></li>
+        <li><label><input type="radio" data-correct="true"> to tease someone</label></li>
+        <li><label><input type="radio" data-correct="false"> to work out together</label></li>
+        <li><label><input type="radio" data-correct="false"> to trip someone</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to hide or ignore unpleasant facts"
+         data-example="They tried to sweep the scandal under the carpet.">
+      <p class="question-text">What does “sweep under the carpet” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to hide unpleasant facts</label></li>
+        <li><label><input type="radio" data-correct="false"> to clean thoroughly</label></li>
+        <li><label><input type="radio" data-correct="false"> to paint floors</label></li>
+        <li><label><input type="radio" data-correct="false"> to admit mistakes</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to avoid getting to the point"
+         data-example="Stop beating around the bush and tell me what happened.">
+      <p class="question-text">What does “beat around the bush” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to avoid the main point</label></li>
+        <li><label><input type="radio" data-correct="false"> to garden carefully</label></li>
+        <li><label><input type="radio" data-correct="false"> to drum softly</label></li>
+        <li><label><input type="radio" data-correct="false"> to strike bushes</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="to go to bed, to sleep"
+         data-example="After the long flight, I was ready to hit the sack immediately.">
+      <p class="question-text">What does “hit the sack” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> to go to bed</label></li>
+        <li><label><input type="radio" data-correct="false"> to strike a bag</label></li>
+        <li><label><input type="radio" data-correct="false"> to pack luggage</label></li>
+        <li><label><input type="radio" data-correct="false"> to wake up early</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <!-- Advanced Vocabulary -->
+    <div class="question"
+         data-explanation="lasting for a very short time"
+         data-example="The beauty of the sunset was ephemeral and quickly vanished.">
+      <p class="question-text">What does “ephemeral” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> lasting a very short time</label></li>
+        <li><label><input type="radio" data-correct="false"> extremely valuable</label></li>
+        <li><label><input type="radio" data-correct="false"> difficult to understand</label></li>
+        <li><label><input type="radio" data-correct="false"> always changing</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="extremely clear in style or meaning"
+         data-example="His explanation was so pellucid that everyone understood immediately.">
+      <p class="question-text">What does “pellucid” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> extremely clear</label></li>
+        <li><label><input type="radio" data-correct="false"> full of holes</label></li>
+        <li><label><input type="radio" data-correct="false"> very bright</label></li>
+        <li><label><input type="radio" data-correct="false"> somewhat confusing</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="refusing to obey orders or directions"
+         data-example="The recalcitrant child refused to go to bed on time.">
+      <p class="question-text">What does “recalcitrant” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> refusing to obey authority</label></li>
+        <li><label><input type="radio" data-correct="false"> easily trained</label></li>
+        <li><label><input type="radio" data-correct="false"> extremely friendly</label></li>
+        <li><label><input type="radio" data-correct="false"> always willing</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="overly eager to please or obey"
+         data-example="His obsequious manner annoyed all his colleagues.">
+      <p class="question-text">What does “obsequious” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> overly eager to please</label></li>
+        <li><label><input type="radio" data-correct="false"> frighteningly silent</label></li>
+        <li><label><input type="radio" data-correct="false"> habitually late</label></li>
+        <li><label><input type="radio" data-correct="false"> highly energetic</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="clear, logical, and convincing"
+         data-example="She made a cogent argument that won over the committee.">
+      <p class="question-text">What does “cogent” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> clear and convincing</label></li>
+        <li><label><input type="radio" data-correct="false"> very brief</label></li>
+        <li><label><input type="radio" data-correct="false"> overly complex</label></li>
+        <li><label><input type="radio" data-correct="false"> emotionally charged</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="unwilling to change one’s viewpoint or agree"
+         data-example="The committee remained intransigent despite all pleas.">
+      <p class="question-text">What does “intransigent” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> unwilling to change one’s view</label></li>
+        <li><label><input type="radio" data-correct="false"> easily persuaded</label></li>
+        <li><label><input type="radio" data-correct="false"> mildly curious</label></li>
+        <li><label><input type="radio" data-correct="false"> overly optimistic</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+
+    <div class="question"
+         data-explanation="cheerfully optimistic, even in difficulty"
+         data-example="Despite the delays, she remained sanguine about the launch.">
+      <p class="question-text">What does “sanguine” mean?</p>
+      <ul class="answers">
+        <li><label><input type="radio" data-correct="true"> cheerfully optimistic</label></li>
+        <li><label><input type="radio" data-correct="false"> deeply pessimistic</label></li>
+        <li><label><input type="radio" data-correct="false"> quietly angry</label></li>
+        <li><label><input type="radio" data-correct="false"> unusually calm</label></li>
+      </ul>
+      <button type="button" class="submit-btn">Submit</button>
+      <div class="feedback" style="display: none;"></div>
+    </div>
+  </div>
+
+  <script>
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('questions-container');
+      const questions = Array.from(container.children);
+
+      // Shuffle questions
+      shuffle(questions);
+      container.innerHTML = '';
+
+      questions.forEach((qDiv, idx) => {
+        // Assign unique name to each set of radios
+        qDiv.querySelectorAll('input[type="radio"]').forEach(input => {
+          input.name = 'q' + (idx + 1);
+        });
+
+        // Shuffle answer options
+        const items = Array.from(qDiv.querySelectorAll('.answers li'));
+        shuffle(items);
+        const ul = qDiv.querySelector('.answers');
+        ul.innerHTML = '';
+        items.forEach(li => ul.appendChild(li));
+
+        container.appendChild(qDiv);
+      });
+
+      // Per-question submit handlers
+      container.querySelectorAll('.question').forEach(qDiv => {
+        const btn = qDiv.querySelector('.submit-btn');
+        const feedback = qDiv.querySelector('.feedback');
+
+        btn.addEventListener('click', () => {
+          const chosen = qDiv.querySelector('input[type="radio"]:checked');
+          if (!chosen) {
+            feedback.style.display = 'block';
+            feedback.textContent = 'Please select an answer.';
+            return;
+          }
+          const correct = chosen.dataset.correct === 'true';
+          const correctText = qDiv.querySelector('input[data-correct="true"]')
+                                 .parentElement.textContent.trim();
+          const explanation = qDiv.dataset.explanation;
+          const example = qDiv.dataset.example;
+
+          let html = correct
+            ? '<p>Correct!</p>'
+            : `<p>Incorrect. The correct answer is: ${correctText}.</p>`;
+          html += `<p>Explanation: ${explanation}.</p>`;
+          html += `<p>Example: ${example}</p>`;
+
+          feedback.innerHTML = html;
+          feedback.style.display = 'block';
+          btn.disabled = true;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
